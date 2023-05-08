@@ -1,92 +1,56 @@
-# React TypeScript template with Vite
+# Come Assemble React Test
 
-This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) boilerplate built with [Vite](https://vitejs.dev).
+The objective of the project is the development of a simplified version of the IMDB site.
 
-## What's inside?
+## Layout
 
-- [ReactJS](https://reactjs.org)
-- [Vite](https://vitejs.dev)
-- [TypeScript](https://www.typescriptlang.org)
-- [Jest](https://jestjs.io)
-- [Testing Library](https://testing-library.com)
-- [Cypress](https://www.cypress.io)
-- [ESLint](https://eslint.org)
-- [Prettier](https://prettier.io)
-- [Polyfills](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy#readme)
+[Layout](https://www.figma.com/file/MxV5N2cbeu7ewCyfpHxQ0N/Come-Assemble---React-test?type=design&node-id=0%3A1&t=DjNPyHNiJ2BvVOuF-1)
+
+## Requirements
+
+- Home page with a list of movies that are currently in theatres
+
+```bash
+  https://api.themoviedb.org/3/movie/now_playing
+```
+
+- Movie page with some basic information
+
+```bash
+  https://api.themoviedb.org/3/movie/{movie_id}
+```
+
+- Search movies by names
+
+```bash
+  https://api.themoviedb.org/3/search/movie
+```
 
 ## Getting started
 
-1. Create the project.
-
-   ```bash
-   npx degit fabien-ml/react-ts-vite-template my-app
-   ```
-
-2. Access the project directory.
-
-   ```bash
-   cd my-app
-   ```
-
-3. Initialize a git repository.
-
-   ```bash
-   git init
-   ```
-
-4. Install dependencies.
-
-   ```bash
-   npm install
-   ```
-
-5. Start dev server with hot reload at http://localhost:3000.
-   ```bash
-   npm run dev
-   ```
-
-## Recommended VS Code extensions
-
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-## Other commands
-
-### Lint commands
+Install dependencies and start dev server with hot reload at http://localhost:3000.
 
 ```bash
-npm run lint
-```
-
-### Build commands
-
-```bash
-npm run build
-```
-
-### Run the app in production mode at http://localhost:3000.
-
-```bash
-npm run serve
+  yarn
+  yarn dev
 ```
 
 ### Test commands
 
-- Run unit tests and watch
-  ```bash
-  npm run test:unit
-  ```
-- Run unit tests with coverage
-  ```bash
-  npm run test:unit:coverage
-  ```
-- Run e2e tests
-  ```bash
-  npm run test:e2e
-  ```
+Run unit tests and watch
 
-## License
+```bash
+  yarn test:unit
+```
 
-This project is licensed under the MIT License.
+Run unit tests with coverage
 
-# assemble-movies-test
+```bash
+  yarn test:unit:coverage
+```
+
+Run e2e tests
+
+```bash
+  yarn test:e2e
+```
