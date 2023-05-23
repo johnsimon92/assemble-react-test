@@ -1,7 +1,35 @@
-import { createBrowserRouter } from "react-router-dom";
+import { QueryClient } from "@tanstack/react-query";
+import { createBrowserRouter, LoaderFunction, Outlet } from "react-router-dom";
 
-import Homepage from "./pages/home";
+import { movieDetailLoader, nowPlayingLoader } from "@/api";
+import { Header } from "@/components/Header";
+import Homepage from "@/pages/home";
+import MovieDetail from "@/pages/movie_detail";
 
-export const router = createBrowserRouter([
-  { path: "/", element: <Homepage /> },
-]);
+const Layout = () => {
+  return (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  );
+};
+
+export const getRouter = (queryClient: QueryClient) =>
+  createBrowserRouter([
+    {
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Homepage />,
+          loader: nowPlayingLoader(queryClient),
+        },
+        {
+          path: "movie/:id",
+          element: <MovieDetail />,
+          loader: movieDetailLoader(queryClient) as unknown as LoaderFunction,
+        },
+      ],
+    },
+  ]);

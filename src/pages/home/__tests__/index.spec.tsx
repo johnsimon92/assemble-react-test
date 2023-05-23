@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import Homepage from "../";
+import Homepage from "..";
 
 describe("Homepage", () => {
   it("should renders", () => {

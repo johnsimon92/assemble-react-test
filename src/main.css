@@ -62,3 +62,11 @@ h6 {
 }
 
 /* END - CSS Reset */
+
+main {
+  padding: 0 60px;
+  background-color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  color: #ffffff;
+}
